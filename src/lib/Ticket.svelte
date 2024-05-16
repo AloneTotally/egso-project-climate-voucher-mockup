@@ -1,6 +1,7 @@
 <script>
     export let value;
     export let selected = false;
+    // export let redeemed = false;
     $: activeClass = selected ? "" : "border border-2 border-black"
 </script>
 <!-- 

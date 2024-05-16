@@ -1,13 +1,13 @@
 <script>
     import qrcode from '$lib/assets/VoucherQrCode.png'
     import redeemedqrcode from '$lib/assets/RedeemedQrCode.png'
-    import { sum } from '$lib/stores.js';
+    import { sum, redeemed} from '$lib/stores.js';
 	import { onMount } from 'svelte';
-    let redeemed = false;
+    // let redeemed = false;
     onMount(() => {
 
         setTimeout(() => {
-            redeemed = true
+            $redeemed = true
         }, 5000)
     })
 </script>
@@ -43,7 +43,7 @@
                     <div class="text-2xl">Show to shop</div>
                     <div class="text-4xl flex flex-row items-center"><span class="text-lg">$</span>{$sum}</div>
                 </div>
-                <div class="mt-10"><img src={!redeemed ? qrcode: redeemedqrcode} alt="" class="w-72 h-72"></div>
+                <div class="mt-10"><img src={!$redeemed ? qrcode: redeemedqrcode} alt="" class="w-72 h-72"></div>
                 <div class="text-black text-xs font-medium">Valid until 31 Dec 2027</div>
             </div>
 

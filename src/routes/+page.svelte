@@ -4,16 +4,18 @@
     // import svelteLogo from './assets/svelte.svg'
     // import viteLogo from '/vite.svg'
     import logo from '$lib/assets/ClimateVoucherLogo.png'
-    import { sum } from '$lib/stores.js';
+    import { sum, selected, redeemed } from '$lib/stores.js';
     import Ticket from '$lib/Ticket.svelte';
-    let values: Array<number> = [1, 1, 2, 2, 5, 5, 10, 10, 50, 50, 100]
-    let selected: Array<boolean> = [false, false, false, false, false, false, false, false, false, false, false];
+    let values: Array<number> = [2, 2, 2, 2, 2, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 50, 50, 50]
+    // let selected: Array<boolean> = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+    
+    
   
     const updateTicket = (i: number) => {
-        selected[i]=!selected[i];
+        $selected[i]=!$selected[i];
         // console.log(selected);
         
-        $sum = sumValues(selected)
+        $sum = sumValues($selected)
     }
 
   const sumValues = (selectArray : Array<boolean>) : number => {
@@ -93,7 +95,7 @@
   
         <div class="grid grid-cols-2 w-screen bg-white mt-5 rounded-3xl p-5 pb-28">
           {#each values as value, i}
-            <Ticket {value} selected={selected[i]} on:click={() => updateTicket(i)}/>
+            <Ticket {value} selected={$selected[i]} on:click={() => updateTicket(i)}/>
           {/each}
         </div>
       
