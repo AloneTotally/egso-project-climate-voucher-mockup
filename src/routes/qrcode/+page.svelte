@@ -2,13 +2,17 @@
     import qrcode from '$lib/assets/VoucherQrCode.png'
     import redeemedqrcode from '$lib/assets/RedeemedQrCode.png'
     import { sum, redeemed} from '$lib/stores.js';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
     // let redeemed = false;
+    let timeout;
     onMount(() => {
 
-        setTimeout(() => {
+        timeout = setTimeout(() => {
             $redeemed = true
         }, 5000)
+    })
+    onDestroy(() => {
+        clearTimeout(timeout)
     })
 </script>
 
