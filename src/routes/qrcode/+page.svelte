@@ -13,12 +13,12 @@
 </script>
 
 <body class=" w-screen h-screen text-white bg-blue">
-    <div class="flex flex-row items-center ml-1"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+    <div class="flex flex-row items-center ml-3 pt-3"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path d="M9.27415 12.0006L16.2842 4.99053C16.4795 4.79527 16.4795 4.47868 16.2842 4.28342L15.7185 3.71774C15.5232 3.52247 15.2067 3.52247 15.0114 3.71774L7.08212 11.647C6.88685 11.8423 6.88685 12.1589 7.08212 12.3541L15.0114 20.2834C15.2067 20.4787 15.5232 20.4787 15.7185 20.2834L16.2842 19.7177C16.4795 19.5225 16.4795 19.2059 16.2842 19.0106L9.27415 12.0006Z" fill="white"/>
         </svg></span>
-        <a href="/">Back</a>
+        <a class="ml-1 font-medium" href="/">Back</a>
     </div>
-    <div class="text-2xl font-medium mt-10 ml-1">Climate vouchers</div>
+    <div class="text-2xl font-medium mt-10 ml-3">Climate vouchers</div>
         <div class="w-screen bg-white mt-5 rounded-3xl p-5 pb-28 flex flex-col items-center">
             <svg width="300" height="469" viewBox="0 0 324 469" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_20_48)">
