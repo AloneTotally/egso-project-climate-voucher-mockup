@@ -95,7 +95,12 @@
   
         <div class="grid grid-cols-2 w-screen bg-white mt-5 rounded-3xl p-5 pb-28">
           {#each values as value, i}
-            <Ticket {value} selected={$selected[i]} on:click={() => updateTicket(i)}/>
+            {#if $redeemed}  
+              <Ticket {value} selected={$selected[i]}/>
+            {:else}
+              <Ticket {value} selected={$selected[i]} on:click={() => updateTicket(i)}/>
+            {/if}
+            
           {/each}
         </div>
       
