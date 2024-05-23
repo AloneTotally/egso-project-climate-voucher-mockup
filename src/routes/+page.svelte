@@ -33,7 +33,7 @@
 
 <body class=" w-screen h-screen">
     {#if $sum > 0}
-      <a href="/qrcode" class="fixed w-5/6 bottom-10 rounded-lg bg-dark-dark-blue left-1/2 z-20 h-20 flex flex-row items-center justify-between px-5 text-white" style="transform: translateX(-50%)">
+      <a href="/qrcode" class="fixed w-5/6 bottom-10 rounded-lg bg-dark-dark-blue left-1/2 z-50 h-20 flex flex-row items-center justify-between px-5 text-white" style="transform: translateX(-50%)">
         <div class="flex flex-row items-center gap-1">
           <div class="font-medium text-lg transition-colors">$</div>
           <div class="font-bold text-4xl transition-colors">{$sum}</div>
